@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_account"
+            android:icon="@drawable/ic_menu_account"
+            android:title="Log In" />
+        <item
+            android:id="@+id/nav_fav"
+            android:icon="@drawable/ic_menu_fav"
+            android:title="I miei preferiti" />
+        <item
+            android:id="@+id/nav_myevents"
+            android:icon="@drawable/ic_menu_myevents"
+            android:title="I miei eventi" />
+        <item
+            android:id="@+id/nav_passaparola"
+            android:icon="@drawable/ic_menu_passaparola"
+            android:title="Passaparola" />
+    </group>
+
+<group
+    android:id="@+id/share"
+    android:title="Share">
+
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_fav"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_fav"
+                android:title="Send" />
+    </group>
+
+
+</menu>

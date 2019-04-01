@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".DetailActivity"
+    tools:showIn="@layout/activity_detail">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/text_margin">
+
+        <TextView
+            android:id="@+id/title_detail"
+            style="@style/EventTitle"
+            android:textColor="@android:color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"/>
+
+<!--        <TextView
+            android:id="@+id/date_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/bottom_header_bar"
+            android:layout_alignTop="@+id/time_detail"
+            android:layout_toEndOf="@+id/calendar_detail_icon"
+            android:text="12 Gen, 2018" />
+
+        <TextView
+            android:id="@+id/time_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/title_detail"
+            style="@style/bottom_header_bar"
+            android:layout_below="@+id/title_detail"
+            android:layout_marginTop="-20dp"
+            android:text="12:00" />
+
+        <TextView
+            android:id="@+id/address_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/date_detail"
+            android:layout_alignTop="@id/city_detail"
+            style="@style/bottom_header_bar"
+            android:layout_toEndOf="@id/location_detail_icon"
+            android:text="Via dei Mille, 125" />
+
+        <TextView
+            android:id="@+id/city_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/bottom_header_bar"
+            android:layout_alignEnd="@+id/title_detail"
+            android:layout_marginBottom="-30dp"
+            android:text="Chieti" />
+
+        <ImageView
+            android:id="@+id/calendar_detail_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/time_detail"
+            android:src="@drawable/ic_date_detail" />
+
+        <ImageView
+            android:id="@+id/location_detail_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/city_detail"
+            android:src="@drawable/ic_location_detail" />-->
+
+        <TextView
+            android:id="@+id/info_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp" />
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>
