@@ -7,4 +7,7 @@ presenting her writings in the local bookshop.
 Sport competitions, music events, local exhibitions and fairs; EventMe will give them visibility 
 by providing a one of a kind platform where anyone will be able to post their own events. 
 
+EventMe will be particularly useful in small areas and/or for whoever can't make it to
+the big promotional mainstreams.
+
 EventMe is working on progress.
