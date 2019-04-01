@@ -6,3 +6,5 @@ They perform often remaining in the anonymity. The young band playing in a pub, 
 presenting her writings in the local bookshop. 
 Sport competitions, music events, local exhibitions and fairs; EventMe will give them visibility 
 by providing a one of a kind platform where anyone will be able to post their own events. 
+
+EventMe is working on progress.
