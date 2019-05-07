@@ -7,28 +7,38 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <array name="event_ID">
+    <integer-array name="event_ID">
+        <item>0</item>
         <item>1</item>
         <item>2</item>
-        <item>3</item>
-    </array>
+    </integer-array>
 
     <string-array name="event_titles">
-        <item>La Sagra della Befana</item>
-        <item>Il Festival del pirla</item>
-        <item>Music Band Concert</item>
+        <item>Meeting Point</item>
+        <item>Il Festival del panino</item>
+        <item>Tesori d&apos;Oriente</item>
     </string-array>
 
     <string-array name="event_info">
-        <item>Cosa hai perso. Cosa hai perso. Cosa hai perso. Cosa hai perso. Cosa hai perso
-        Cosa hai perso. Cosa hai perso. Cosa hai perso. Cosa hai perso.Cosa hai perso
-        Cosa hai perso. Cosa hai </item>
-        <item>Non ci puoi arrivare se non ci sei. Non ci puoi arrivare se non ci sei.
-        Non ci puoi arrivare se non ci sei. Non ci puoi arrivare se non ci sei.
-        Non ci puoi arrivare se non ci sei</item>
-        <item>Go Guys! New kids on the block. Go Guys! New kids on the block.
-        Go Guys! New kids on the block. Go Guys! New kids on the block.
-        Go Guys! New kids on the block.</item>
+        <item>Malta è ufficialmente l&quot;isola del Blockchain.
+                E' il primo paese europeo ad aver creato un framework legislativo dedicato alla Blockchain e alle Crypto valute.
+            Questo rappresenta una pietra miliare per tutta il comparto legato a questa teconologia e a tutto il settore Fintech.
+            Durante l'Italian Blockchain Summit approfondiremo tutta la normativa maltese attraverso
+            l'analisi dei maggiori esperti nel settore.
+            Ci sarà la possibilità di affrontare casi concreti di imprenditori italiani che hanno già realizzato
+            delle ICO e verificare alcune criticità.</item>
+        <item>I panini, come potete ben immaginare, sono dalla prima edizione i veri protagonisti
+            delle serate; sono conditi con i companatici tipici della tradizione della conservazione
+            delle ortive locali e dei prodotti dell’Adriatico sottolio e sottaceto. Sono proposti
+            in tante gustosissime varianti, con pomodori sott’olio, melanzane, frittata, carciofi,
+            peperoni, lampascioni, acciughe, tonno, ricotta forte e parmigiana.</item>
+        <item>Il 25-26-27-28 Aprile e 1-4-5 Maggio 2019, il Festival dell’Oriente torna a Roma,
+            presso la Nuova fiera di Roma, nel contesto dell’evento “Roma incontra il Mondo”
+            composto da tanti altri Festival.
+Mostre fotografiche, bazar, stand commerciali, gastronomia tipica, cerimonie tradizionali,
+            spettacoli folklorisitici, medicine naturali, concerti, danze e arti marziali
+            si alterneranno nelle numerose aree tematiche dedicate ai vari paesi in un continuo ed
+            avvincente susseguirsi di show, incontri, seminari ed esibizioni..</item>
     </string-array>
 
     <array name="event_images">
@@ -71,6 +81,7 @@
         "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
         "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
     </string>
+
     <string name="event_not_found">Event Not Found</string>
 
 </resources>

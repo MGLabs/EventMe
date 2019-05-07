@@ -30,9 +30,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHol
     Event mCurrentEvent;
     private Context mContext;
 
-    public static String EVENT_ID_EXTRA;
-    public static String EVENT_TITLE_EXTRA;
-    public static String EVENT_INFO_EXTRA;
+    public static String EVENT_ID_EXTRA = " ";
     public static String EVENT_IMAGE_EXTRA = "";
 
     //Adapter constructor
@@ -71,7 +69,6 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHol
     public class EventViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         final TextView eventTitle;
-        final TextView eventInfo;
         final ImageView eventImage;
 
         /**
@@ -84,7 +81,6 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHol
 
             //Initialize the views
             eventTitle = itemView.findViewById(R.id.title_textView);
-            eventInfo= itemView.findViewById(R.id.info_textView);
             eventImage = itemView.findViewById(R.id.event_image);
 
             //Set the onClickListener on the entire view
@@ -94,7 +90,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHol
         void bindTo(Event currentEvent) {
             //Populate the textviews with data and images with Glide
             eventTitle.setText(currentEvent.getTitle());
-            eventInfo.setText(currentEvent.getInfo());
+            //eventInfo.setText(currentEvent.getInfo());
             Glide.with(mContext).load(currentEvent.getImageResource()).into(eventImage);
         }
 
@@ -105,12 +101,14 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHol
                 Event event = store.getEventList().get(position);
                 Intent intent = new Intent(mContext, DetailActivity.class);
                 intent.putExtra(EVENT_ID_EXTRA, event.getEventID());
-                intent.putExtra(EVENT_TITLE_EXTRA, event.getTitle());
-                intent.putExtra(EVENT_INFO_EXTRA, event.getInfo());
                 intent.putExtra(EVENT_IMAGE_EXTRA, event.getImageResource());
                 mContext.startActivity(intent);
-            } else
-                Toast.makeText(mContext, "RECIPE NOT FOUND", Toast.LENGTH_SHORT).show();
+
+                Log.i("ID_INFO", "onClick:" + event.getInfo());
+
+            } else {
+                Toast.makeText(mContext, "EVENT NOT FOUND", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 }

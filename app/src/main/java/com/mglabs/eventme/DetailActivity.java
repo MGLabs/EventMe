@@ -19,8 +19,6 @@ import com.mglabs.eventme.model.EventStore;
 
 import static com.mglabs.eventme.EventAdapter.EVENT_ID_EXTRA;
 import static com.mglabs.eventme.EventAdapter.EVENT_IMAGE_EXTRA;
-import static com.mglabs.eventme.EventAdapter.EVENT_INFO_EXTRA;
-import static com.mglabs.eventme.EventAdapter.EVENT_TITLE_EXTRA;
 
 public class DetailActivity extends AppCompatActivity {
 
@@ -43,16 +41,15 @@ public class DetailActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(null);
         mAppBar = findViewById(R.id.app_bar);
 
-        mTitleDetail = findViewById(R.id.title_detail);
         mDescrDetail = findViewById(R.id.info_detail);
+        mTitleDetail = findViewById(R.id.title_detail);
 
-        // Retrieve details of the single event
+        // Retrieve ID of the single event from Intent
         EventStore store = new EventStore(this);
         Intent intentDetail = getIntent();
         mEventID = intentDetail.getIntExtra(EVENT_ID_EXTRA, 0);
-        mTitleDetail.setText(intentDetail.getStringExtra(EVENT_TITLE_EXTRA));
-        mDescrDetail.setText(intentDetail.getStringExtra(EVENT_INFO_EXTRA));
 
+        //Retrieve the event from the store
         Event event = store.getEventByID(mEventID);
 
         if (event == null) {
@@ -60,9 +57,13 @@ public class DetailActivity extends AppCompatActivity {
             return;
         }
 
+        // Display the rest of event's info
+        mTitleDetail.setText(event.getTitle());
+        mDescrDetail.setText(event.getInfo());
+
         mAppBar.setBackgroundResource(intentDetail.getIntExtra(EVENT_IMAGE_EXTRA, 0));
 
-        //Initialize the sharedPreferences
+        //region Shared Preferences
         mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
 
         // FAB TO ADD PREFS
@@ -71,19 +72,22 @@ public class DetailActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 fab.setSelected(true);
+                addToPrefs(view);
             }
         });
+        //endregion
+
     }
 
-    /*public void AddToPrefs(View view) {
+
+    public void addToPrefs(View view) {
         //get an Editor
         SharedPreferences.Editor preferencesEditor = mPreferences.edit();
-        preferencesEditor.putInt(EVENT_ID_EXTRA, Integer.parseInt(mEventID.getText().toString()));
+        preferencesEditor.putInt(EVENT_ID_EXTRA, mEventID);
         preferencesEditor.apply();
 
         int ID = mPreferences.getInt(EVENT_ID_EXTRA, 0);
         Toast.makeText(this, String.valueOf(ID), Toast.LENGTH_LONG).show();
-    }*/
+    }
 }

@@ -20,12 +20,10 @@
             android:layout_height="wrap_content"
             android:adjustViewBounds="true" />
 
-
         <TextView
             android:id="@+id/info_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="55dp"
             android:fontFamily="sans-serif-thin"
             android:textColor="#4B4C51"
             style="@style/EventInfo"/>
