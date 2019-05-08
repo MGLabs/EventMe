@@ -10,4 +10,4 @@ by providing a one of a kind platform where anyone will be able to post their ow
 EventMe will be particularly useful in small areas and/or for whoever can't make it to
 the big promotional mainstreams.
 
-EventMe is working on progress.
+EventMe is work in progress.
