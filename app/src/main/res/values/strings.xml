@@ -96,4 +96,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="action_search">Cerca</string>
     <string name="action_filter">filtra</string>
+    <string name="in_settimana">In settimana</string>
+    <string name="weekend">Weekend</string>
+    <string name="oggi">Oggi</string>
+    <string name="search_hint">Cerca per evento</string>
 </resources>

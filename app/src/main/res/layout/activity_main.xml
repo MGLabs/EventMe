@@ -14,8 +14,9 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:popupTheme="@style/AppTheme.PopupOverlay" />
+        app:popupTheme="@style/AppTheme.PopupOverlay" >
 
+    </androidx.appcompat.widget.Toolbar>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
@@ -45,6 +46,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_marginTop="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar">
@@ -53,19 +55,20 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@drawable/top_bar_weekend"></androidx.appcompat.widget.AppCompatImageView>
+            app:srcCompat="@drawable/top_bar_today"/>
+
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ic_fav"></androidx.appcompat.widget.AppCompatImageView>
+            app:srcCompat="@drawable/top_bar_weekend"/>
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ic_fav"></androidx.appcompat.widget.AppCompatImageView>
+            app:srcCompat="@drawable/top_bar_week"/>
 
     </LinearLayout>
 
@@ -83,21 +86,21 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Oggi" />
+            android:text="@string/oggi" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_weight="1"
-            android:text="Weekend" />
+            android:text="@string/weekend" />
 
         <TextView
             android:layout_width="0dp"
             android:gravity="center"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="in settimana" />
+            android:text="@string/in_settimana" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
