@@ -27,7 +27,7 @@ class EventListFragment : Fragment(), EventAdapter.ListItemListener {
     val eventList = listOf(
         Event(
             "1",
-            "event 1"
+            "The Event of the Year"
         ),
         Event(
             eventId = "2",

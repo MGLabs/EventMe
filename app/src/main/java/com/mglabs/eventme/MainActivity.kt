@@ -6,16 +6,18 @@ import android.content.Context
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import androidx.appcompat.app.ActionBar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.NavigationUI
+import androidx.navigation.ui.NavigationUI.setupWithNavController
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.mglabs.eventme.databinding.ActivityMainBinding
+import com.mglabs.eventme.ui.events.CurvedBottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -29,22 +31,22 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val toolbar: Toolbar = findViewById(R.id.toolbar)
-        setSupportActionBar(toolbar)
+       // val toolbar: Toolbar = findViewById(R.id.toolbar)
+      //  setSupportActionBar(toolbar)
 
-        val actionBar: ActionBar? = supportActionBar
+     //   val actionBar: ActionBar? = supportActionBar
         //  toolbar.hide
-        actionBar?.title = " "
+     //   actionBar?.title = " "
 
 
-        val navView: BottomNavigationView = binding.navView
+        val navView: CurvedBottomNavigationView = binding.navView as CurvedBottomNavigationView
 
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
+                R.id.navigation_home, R.id.navigation_fav, R.id.navigation_me
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)

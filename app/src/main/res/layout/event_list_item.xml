@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="16dp"
+    app:cardElevation="5dp"
+    app:cardUseCompatPadding="true"
     app:cardCornerRadius="8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -27,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingStart="5dp"
-            android:text="4 August"
+            android:text="4 Dic 2023"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/event_title_tv" />
 
@@ -58,7 +60,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toStartOf="@id/fav_iv"
             app:layout_constraintTop_toBottomOf="@id/event_iv"
-            app:srcCompat="@android:drawable/star_off" />
+            app:srcCompat="@drawable/star_rating" />
 
         <TextView
             android:id="@+id/event_title_tv"
@@ -79,5 +81,15 @@
             android:paddingBottom="5dp"
             android:text="Milano"
             app:layout_constraintTop_toBottomOf="@id/event_date_tv" />
+
+        <TextView
+            android:id="@+id/rating_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="10dp"
+            android:text="4.3"
+            app:layout_constraintStart_toEndOf="@id/star_iv"
+            app:layout_constraintBottom_toBottomOf="@+id/star_iv"
+          app:layout_constraintEnd_toEndOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
